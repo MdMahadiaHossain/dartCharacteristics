@@ -1,21 +1,34 @@
-@// dart class fields and properties
+@// dart class fields and getter
 
 class Rectangle {
   // this are the fields of Rectangle class
-  final num left, top, width, height;
+  final num left, top, right, bottom;
 
   // fields needs to be initiate by constructor
-  Rectangle(this.left, this.top, this.width, this.height);
+  Rectangle(this.left, this.top, this.right, this.bottom);
 
   
+//CONSIDER using => for simple members.
 
-  // it is the property of Rectangle class
-  // properties have getter and setter
-  num get right => left + width;
-  set right(num value) => left = value - width;
-  num get bottom => top + height;
-  set bottom(num value) => top = value - height;
+//In addition to using => for function expressions, 
+//Dart also lets you define members with it. That style is a good fit 
+//for simple members that just calculate and return a value.
+
+double get area => (right - left) * (bottom - top);
+  
+// but if people needs to write multiple lines and needs to use cascade avoid it, instead use block 
+  
+double  area(){
+. . . .
+  . . .  
 }
+  
+  
+  
+}// class ends
+
+
+
 
 @// dart json decoder
 
