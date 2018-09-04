@@ -30,3 +30,15 @@ var firstScore = scores[0];
 assert(firstScore is Map);
 assert(firstScore['score'] == 40);
 
+
+
+
+@// Cases where async is useful include:
+
+//     You are using await. (This is the obvious one.)
+
+//     You are returning an error asynchronously. async and then throw is shorter than return Future.error(...).
+
+//     You are returning a value and you want it implicitly wrapped in a future. async is shorter than Future.value(...).
+
+
