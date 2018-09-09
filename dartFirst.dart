@@ -31,6 +31,28 @@ assert(firstScore is Map);
 assert(firstScore['score'] == 40);
 
 
+// So Map is a Whole Json object, it has "key" -> value pair
+
+    Map<String, List<Map<String,dynamic>>> jsOn={
+      "person": [
+        {
+          "name": "Mahadi",
+          "age" : 27,
+        },
+        {
+          "name": "KAT",
+          "age" : 28,
+        }
+      ]
+      
+    };
+    
+    print(jsOn["person"]);
+// result [{name: Mahadi, age: 27}, {name: KAT, age: 28}]
+
+
+
+
 
 
 @// Cases where async is useful include:
